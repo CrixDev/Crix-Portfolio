@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
-import { FaCode, FaDatabase, FaGlobe, FaLayerGroup, FaServer, FaMobileAlt, FaMagic, FaBolt, FaEnvelope } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaCode, FaDatabase, FaGlobe, FaLayerGroup, FaServer, FaMobileAlt, FaMagic, FaBolt, FaEnvelope, FaFigma, FaPenSquare } from "react-icons/fa";
 import crix1 from "../assets/Crix.png";
+import pg1 from "../assets/Pagina1.png";
+import pg2 from "../assets/Pagina2.png";
+import pg3 from "../assets/Pagina3.png";
 
 export default function Home() {
   // Animation variants
@@ -27,24 +31,24 @@ export default function Home() {
   // Skills data
   const skillsData = [
     {
-      category: "Frontend",
+      category: "Backend",  
       icon: FaLayerGroup,
-      skills: [
-        { name: "React", level: 90 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "JavaScript", level: 85 },
-        { name: "Tailwind CSS", level: 80 },
-        { name: "Framer Motion", level: 75 },
-      ],
-    },
-    {
-      category: "Backend",
-      icon: FaServer,
       skills: [
         { name: "Node.js", level: 80 },
         { name: "Express", level: 75 },
         { name: "MongoDB", level: 70 },
         { name: "SQL", level: 65 },
+      ],
+    },
+    {
+      category: "Frontend",
+      icon: FaServer,
+      skills: [
+        { name: "React", level: 90 },
+        { name: "HTML/CSS", level: 95 },
+        { name: "JavaScript", level: 85 },
+        { name: "Tailwind CSS", level: 90 },
+        { name: "Framer Motion", level: 75 },
       ],
     },
     {
@@ -62,23 +66,23 @@ export default function Home() {
   // Experience data
   const experienceData = [
     {
-      title: "Desarrollador Frontend Senior",
-      company: "Tech Solutions Inc.",
-      period: "2021 - Presente",
+      title: "Desarrollador Frontend junior",
+      company: "RysConnect.io",
+      period: "2024 - Presente",
       description:
         "Desarrollo de aplicaciones web utilizando React, TypeScript y Tailwind CSS. Implementación de animaciones con Framer Motion y gestión de estado con Redux.",
     },
     {
-      title: "Desarrollador Full Stack",
-      company: "Digital Innovations",
-      period: "2018 - 2021",
+      title: "Desarrollador frelance Full Stack",
+      company: "CrixDeveloper",
+      period: "2023 - 2024",
       description:
-        "Desarrollo de aplicaciones web completas utilizando MERN stack. Diseño de APIs RESTful y bases de datos MongoDB.",
+        "Desarrollo de Proyectos Freelance con React.",
     },
     {
-      title: "Desarrollador Web Junior",
-      company: "Creative Web Agency",
-      period: "2016 - 2018",
+      title: "Desarrollador web Trainee",
+      company: "Hyperdigital",
+      period: "2022 - 2023",
       description:
         "Desarrollo de sitios web responsivos utilizando HTML, CSS y JavaScript. Implementación de diseños en WordPress.",
     },
@@ -87,24 +91,27 @@ export default function Home() {
   // Projects data
   const projectsData = [
     {
-      title: "E-commerce Platform",
+      title: "Plataforma de Cursos Online",
       description:
-        "Plataforma de comercio electrónico completa con carrito de compras, pagos y panel de administración.",
+        "Plataforma de cursos online con funcionalidades de registro de usuarios, pagos con paypal y gestión de contenido.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "/placeholder.svg?height=200&width=300",
+      image: pg1,
+      path: "https://epenglish4u.com/",
     },
     {
-      title: "Task Management App",
+      title: "Plataforma de Startup IA",
       description:
-        "Aplicación de gestión de tareas con funcionalidades de arrastrar y soltar, recordatorios y colaboración en equipo.",
-      technologies: ["React", "Firebase", "Tailwind CSS", "Framer Motion"],
-      image: "/placeholder.svg?height=200&width=300",
+        "Desarrolle el Frontend para una startup de IA con funcionalidades de autenticación, Diseño responsivo y animaciones fluidas.",
+      technologies: ["React", "Redux", "Tailwind CSS", "Framer Motion"],
+      image: pg2,
+      path: "https://www.rysconnect.io/",
     },
     {
-      title: "Portfolio Website",
-      description: "Sitio web de portfolio personal con animaciones fluidas y diseño responsivo.",
+      title: "Sitio Web de Consultora",
+      description: "Sitio web para una consultora de marketing con diseño moderno y animaciones interactivas.",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Next.js"],
-      image: "/placeholder.svg?height=200&width=300",
+      image: pg3,
+      path: "https://www.hyperdigital.mx/",
     },
   ];
 
@@ -168,15 +175,12 @@ export default function Home() {
           <motion.div variants={itemVariants}>
             <h3 className="text-2xl font-semibold mb-4">Desarrollador Web Apasionado</h3>
             <p className="text-gray-400 mb-4">
-              Soy un desarrollador web full stack con más de 5 años de experiencia creando aplicaciones web modernas y
-              responsivas. Me especializo en React, Node.js y tecnologías relacionadas.
+              Soy un desarrollador web full stack especializado en el Frontend con 3 años de experiencia creando aplicaciones web modernas y
+              responsivas. Me especializo en React, Tailwind y tecnologías relacionadas.
             </p>
             <p className="text-gray-400 mb-4">
               Mi objetivo es crear experiencias digitales que sean tanto funcionales como estéticamente agradables. Me
               apasiona aprender nuevas tecnologías y mejorar constantemente mis habilidades.
-            </p>
-            <p className="text-gray-400">
-              Cuando no estoy codificando, disfruto de la fotografía, el senderismo y tocar la guitarra.
             </p>
           </motion.div>
         </div>
@@ -241,18 +245,18 @@ export default function Home() {
               <div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center text-white">
                 <FaCode size={32} />
               </div>
-              <p className="mt-2 font-medium">Desarrollo</p>
+              <p className="mt-2 font-medium">Desarrollo Web</p>
 
               {/* Connecting lines */}
-              <div className="h-16 w-0.5 bg-gray-700 mt-2"></div>
+              <div className="h-13 w-0.5 bg-gray-700 mt-2"></div>
             </div>
 
             {/* Second level nodes */}
-            <div className="pt-36 flex justify-center gap-32">
+            <div className="pt-40 flex justify-center gap-32">
               {[
+                  { icon: FaServer, label: "Backend" },
                 { icon: FaGlobe, label: "Frontend" },
-                { icon: FaServer, label: "Backend" },
-                { icon: FaMobileAlt, label: "Mobile" },
+                { icon: FaMobileAlt, label: "UX/UI" },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}
@@ -274,14 +278,14 @@ export default function Home() {
             </div>
 
             {/* Third level nodes */}
-            <div className="pt-24 grid grid-cols-6 gap-4">
+            <div className="pt-2 grid grid-cols-6 gap-4">
               {[
+                 { icon: FaDatabase, label: "MongoDB", parent: 1 },
+                 { icon: FaServer, label: "Node.js", parent: 1 },
                 { icon: FaLayerGroup, label: "React", parent: 0 },
                 { icon: FaBolt, label: "Tailwind", parent: 0 },
-                { icon: FaDatabase, label: "Node.js", parent: 1 },
-                { icon: FaDatabase, label: "MongoDB", parent: 1 },
-                { icon: FaMobileAlt, label: "React Native", parent: 2 },
-                { icon: FaLayerGroup, label: "Flutter", parent: 2 },
+                { icon: FaFigma, label: "Figma", parent: 2 },
+                { icon: FaPenSquare, label: "CSS Expert", parent: 2 },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}
@@ -353,30 +357,31 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
-            <motion.div
-              key={project.title}
-              className="bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-700 hover:shadow-md transition-shadow"
-              variants={itemVariants}
-            >
-              <div className="aspect-video w-full overflow-hidden">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-blue-500/10 text-blue-500 text-sm rounded-full">
-                      {tech}
-                    </span>
-                  ))}
+            <Link to={project.path} key={project.title}>
+              <motion.div
+                className="bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-700 hover:shadow-md transition-shadow"
+                variants={itemVariants}
+              >
+                <div className="aspect-video w-full overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  />
                 </div>
-              </div>
-            </motion.div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-400 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="px-3 py-1 bg-blue-500/10 text-blue-500 text-sm rounded-full">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </motion.section>

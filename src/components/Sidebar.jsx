@@ -44,7 +44,7 @@ export function Sidebar() {
   ];
 
   return (
-    <div>
+    <div className="hidden">
       {/* Mobile menu button */}
       <button
         onClick={toggleSidebar}
