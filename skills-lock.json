@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "orwel": {
+      "source": "hyperlabs-ai/hyper-skills",
+      "sourceType": "github",
+      "skillPath": "orwel/SKILL.md",
+      "computedHash": "22847d4db0e04fb6443553244c91ef66e80a26c887da26411bca615d5da84ac9"
+    }
+  }
+}
